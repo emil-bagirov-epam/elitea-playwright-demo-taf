@@ -1,6 +1,7 @@
 package com.elitea.tests.ui;
 
 import com.elitea.ui.pages.LoginPage;
+import com.microsoft.playwright.Page;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
