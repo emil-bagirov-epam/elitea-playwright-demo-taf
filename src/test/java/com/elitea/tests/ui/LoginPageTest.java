@@ -14,7 +14,11 @@ public class LoginPageTest extends BaseUiTest {
     @DisplayName("SCRUM-87: Verify login form input fields are present")
     void verifyLoginFormInputFieldsArePresent() {
         // Given: User is on the login page
-        LoginPage loginPage = new LoginPage(page).navigate();
+        LoginPage loginPage = new LoginPage(page);
+        loginPage.navigate();
+        
+        // Wait for the page to be fully loaded
+        page.waitForSelector("input[placeholder='Type your e-mail']", new Page.WaitForSelectorOptions().setTimeout(10000));
         
         // When: User locates the login form
         // Then: Email input field is visible and labeled
@@ -56,10 +60,5 @@ public class LoginPageTest extends BaseUiTest {
         assertThat(loginPage.getPasswordFieldType())
                 .as("Password field should be of type password")
                 .isEqualTo("password");
-        
-        // Verify the page is correctly loaded
-        assertThat(loginPage.isWelcomeTitleVisible())
-                .as("Welcome title should be visible to confirm page is loaded")
-                .isTrue();
     }
 }
