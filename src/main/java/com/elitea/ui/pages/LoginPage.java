@@ -26,7 +26,7 @@ public class LoginPage extends BasePage {
     }
     
     public LoginPage navigate() {
-        page.navigate(config.getLoginUrl());
+        page.navigate(config.loginUrl());
         page.waitForLoadState();
         // Wait for the login form to be visible
         emailField.waitFor();
