@@ -36,6 +36,7 @@ public final class ConfigLoader {
 
         String baseUrl = merged.getProperty("baseUrl", "http://localhost:3000");
         String apiBaseUrl = merged.getProperty("apiBaseUrl", baseUrl);
+        String loginUrl = merged.getProperty("loginUrl", baseUrl + "/login");
         String browser = merged.getProperty("browser", "chromium");
         boolean headless = Boolean.parseBoolean(merged.getProperty("headless", "true"));
         int timeoutMs = Integer.parseInt(merged.getProperty("timeoutMs", "30000"));
@@ -43,6 +44,7 @@ public final class ConfigLoader {
         return Config.builder()
                 .baseUrl(baseUrl)
                 .apiBaseUrl(apiBaseUrl)
+                .loginUrl(loginUrl)
                 .browser(browser)
                 .headless(headless)
                 .timeoutMs(timeoutMs)
