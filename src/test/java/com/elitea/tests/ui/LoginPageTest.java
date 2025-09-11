@@ -15,11 +15,7 @@ public class LoginPageTest extends BaseUiTest {
     @DisplayName("SCRUM-87: Verify login form input fields are present")
     void verifyLoginFormInputFieldsArePresent() {
         // Given: User is on the login page
-        LoginPage loginPage = new LoginPage(page);
-        loginPage.navigate();
-        
-        // Wait for the page to be fully loaded
-        page.waitForSelector("input[placeholder='Type your e-mail']", new Page.WaitForSelectorOptions().setTimeout(10000));
+        LoginPage loginPage = new LoginPage(page).navigate();
         
         // When: User locates the login form
         // Then: Email input field is visible and labeled
