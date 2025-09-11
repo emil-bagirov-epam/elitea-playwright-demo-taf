@@ -27,6 +27,7 @@ public class LoginPage extends BasePage {
     
     public LoginPage navigate() {
         page.navigate(config.getLoginUrl());
+        page.waitForLoadState();
         return this;
     }
     
