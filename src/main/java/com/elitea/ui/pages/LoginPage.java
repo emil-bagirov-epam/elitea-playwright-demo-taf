@@ -17,6 +17,7 @@ public class LoginPage extends BasePage {
     private final Locator loginForm;
     private final Locator welcomeTitle;
     private final Locator registerLink;
+    private final Locator forgotPasswordLink;
     
     public LoginPage(Page page) {
         super(page);
