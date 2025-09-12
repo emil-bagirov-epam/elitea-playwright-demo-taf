@@ -23,11 +23,12 @@ public class LoginPage extends BasePage {
         this.emailField = page.locator("input[placeholder='Type your e-mail']");
         this.passwordField = page.locator("input[placeholder='Type your password']");
         this.loginButton = page.locator("button:has-text('Log in')");
-        this.emailLabel = page.locator("text=E-mail");
-        this.passwordLabel = page.locator("text=Password");
-        this.loginForm = page.locator("form, div:has(input[placeholder='Type your e-mail'])").first();
+        this.emailLabel = page.locator("text=E-mail").first();
+        this.passwordLabel = page.locator("text=Password").first();
+        this.loginForm = page.locator("div:has(input[placeholder='Type your e-mail'])").first();
         this.welcomeTitle = page.locator("text=Welcome Back");
         this.registerLink = page.locator("a:has-text('Register')");
+        this.forgotPasswordLink = page.locator("text=Forgot password");
     }
     
     /**
