@@ -24,9 +24,9 @@ public class LoginPage extends BasePage {
         this.emailField = page.locator("input[placeholder='Type your e-mail']");
         this.passwordField = page.locator("input[placeholder='Type your password']");
         this.loginButton = page.locator("button:has-text('Log in')");
-        // Use more specific locators to avoid strict mode violations
-        this.emailLabel = page.locator("text=E-mail").and(page.locator("*:not(:has(a))")).first();
-        this.passwordLabel = page.locator("text=Password").and(page.locator("*:not(:has(a))")).first();
+        // Use getByText with exact match to avoid strict mode violations
+        this.emailLabel = page.getByText("E-mail", new Page.GetByTextOptions().setExact(true));
+        this.passwordLabel = page.getByText("Password", new Page.GetByTextOptions().setExact(true));
         this.loginForm = page.locator("div").filter(new Locator.FilterOptions().setHas(emailField)).first();
         this.welcomeTitle = page.locator("text=Welcome Back");
         this.registerLink = page.locator("a:has-text('Register')");
