@@ -8,6 +8,7 @@ import lombok.Value;
 public class Config {
     String baseUrl;
     String apiBaseUrl;
+    String loginUrl;
     String browser;
     boolean headless;
     int timeoutMs;
