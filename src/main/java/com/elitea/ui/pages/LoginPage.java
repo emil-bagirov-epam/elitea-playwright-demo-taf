@@ -18,8 +18,8 @@ public class LoginPage extends BasePage {
     private final Locator pageTitle;
     private final Locator pageSubtitle;
 
-    public LoginPage(Page page, Config config) {
-        super(page, config);
+    public LoginPage(Page page) {
+        super(page);
         this.emailInput = page.locator("#emailInput input");
         this.passwordInput = page.locator("#passwordInput input");
         this.emailLabel = page.locator("label[for='email']");
