@@ -16,7 +16,7 @@ public class LoginPageTest extends BaseUiTest {
 
     @BeforeEach
     void setUp() {
-        loginPage = new LoginPage(page, config);
+        loginPage = new LoginPage(page);
     }
 
     @Test
