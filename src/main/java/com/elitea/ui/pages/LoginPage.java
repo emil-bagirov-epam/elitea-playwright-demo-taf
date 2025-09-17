@@ -33,7 +33,7 @@ public class LoginPage extends BasePage {
      * Navigate to the login page
      */
     public LoginPage navigateToLoginPage() {
-        page.navigate(config.getLoginUrl());
+        page.navigate("https://developer.neonomics.io/auth/login");
         return this;
     }
 
